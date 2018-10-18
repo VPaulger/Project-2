@@ -3,24 +3,52 @@
 <head>
   <title>Instanews</title>
   <link href="./style.css" type="text/css" rel="stylesheet">  
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="./script.js"></script>
 </head>
 
 <body>
   <header>
     <img id="logo" src="./assets/images/nyt-logo.svg" alt="New York Times">
     <div id="dropDownMenu">
-      Choose a selection:
-      <select>
-        <br>
-        <option value="volvo">Volvo</option>
-        <option value="saab">Saab</option>
-        <option value="mercedes">Mercedes</option>
-        <option value="audi">Audi</option>
+      <p>Choose a selection:</p>
+      <select id="selectedValue" required>
+        <option value="" disabled selected>Selections ...</option>
+        <option value="home">Home</option>
+        <option value="opinion">Opinion</option>
+        <option value="world">World</option>
+        <option value="national">National</option>
+        <option value="politics">Politics</option>
+        <option value="upshot">Upshot</option>
+        <option value="nyregion">NY Region</option>
+        <option value="business">Business</option>
+        <option value="technology">Technology</option>
+        <option value="science">Science</option>
+        <option value="health">Health</option>
+        <option value="sports">Sports</option>
+        <option value="arts">Arts</option>
+        <option value="books">Books</option>
+        <option value="movies">Movies</option>
+        <option value="theater">Theater</option>
+        <option value="sundayreview">Sunday Review</option>
+        <option value="fashion">Fashion</option>
+        <option value="tmagazine">T Magazine</option>
+        <option value="food">Food</option>
+        <option value="travel">Travel</option>
+        <option value="magazine">Magazine</option>
+        <option value="realestate">Real Estate</option>
+        <option value="automobiles">Automobiles</option>
+        <option value="obituaries">Obituaries</option>
+        <option value="insider">Insider</option>
       </select>
     </div>
   </header>
+
+  <section id="articleSection">
+
+  </section>
   <footer>
-      &copy; 2016 INSTANEWS
+      &copy; Copyright 2016 INSTANEWS
   </footer>
 
 </body>
