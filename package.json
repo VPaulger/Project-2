@@ -1,0 +1,28 @@
+{
+  "name": "project-02",
+  "version": "1.0.0",
+  "description": "app that pulls articles from n\u001b[A\u001b[A\u001b[B\u001b[Bew york times for our own app",
+  "main": "script.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/VPaulger/Project-2.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/VPaulger/Project-2/issues"
+  },
+  "homepage": "https://github.com/VPaulger/Project-2#readme",
+  "dependencies": {
+    "gulp": "^3.9.1"
+  },
+  "devDependencies": {
+    "gulp-concat": "^2.6.1",
+    "gulp-imagemin": "^4.1.0",
+    "gulp-sass": "^4.0.2",
+    "gulp-uglify": "^3.0.1"
+  }
+}

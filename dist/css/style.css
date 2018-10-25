@@ -1,0 +1,109 @@
+/*SCSS Reset*/
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline; }
+
+/*collection of fonts*/
+@font-face {
+  font-family: 'OpenSans-Light';
+  src: url("../fonts/OpenSans-Light.ttf"); }
+
+/*end of font collection*/
+body {
+  background-color: black; }
+
+header {
+  height: 85vh;
+  color: white;
+  display: flex;
+  align-items: center; }
+
+header img {
+  height: 45%;
+  padding-left: 2%; }
+
+#dropDownMenu {
+  margin-left: 5%;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start; }
+
+#dropDownMenu p {
+  font-family: 'OpenSans-Light';
+  padding: 15px 0px; }
+
+footer {
+  height: 15vh; }
+
+footer p {
+  font-family: 'OpenSans-Light';
+  padding: 30px;
+  color: #c2c2c2; }
+
+/*begin of article section*/
+#articleSection {
+  width: 100%;
+  height: 1000px;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr; }
+
+.article {
+  width: 100%;
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  align-items: flex-end;
+  justify-content: center; }
+
+.article h1 {
+  position: absolute;
+  padding: 10px;
+  background-color: rgba(0, 0, 0, 0.5);
+  color: white;
+  width: auto; }
+
+.article img {
+  width: auto;
+  height: 100%;
+  position: absolute;
+  z-index: -1; }
+
+/*Tablet Media Query*/
+@media only screen and (max-width: 1240px) {
+  header {
+    justify-content: center; }
+  header img {
+    height: 45%;
+    padding-left: 0%; }
+  #dropDownMenu {
+    margin-left: 0%;
+    margin-right: 10%; }
+  #articleSection {
+    height: 1800px;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr; }
+  footer {
+    display: flex;
+    justify-content: center; } }
+
+/*Mobile Media Query*/
+@media only screen and (max-width: 600px) {
+  header {
+    flex-direction: column; }
+  #dropDownMenu {
+    margin-right: 0%;
+    align-items: center; }
+  #articleSection {
+    height: 4000px;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr; }
+  .article img {
+    width: auto;
+    height: 100%;
+    position: absolute;
+    z-index: -1; } }
