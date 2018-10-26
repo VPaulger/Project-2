@@ -31,12 +31,12 @@ $( document ).ready(function() {
       $("#articleSection").show();
       //create a media query for tablet view
       //need to do this in javascript because the page changes on select
-      if ($(window).width() <= 1240){	
+      if ($(window).width() < 1240){	
         $("#dropDownMenu").css({"margin-left":"10%"});
         }
 
       // create a media query for mobile view  
-      if ($(window).width() <= 600){	
+      if ($(window).width() < 600){	
         $("header").css("height", "350px");
         $("#logoDropDownContainer").css("height", "100%");
         $("#logoDropDownContainer").css("align-items", "center");
