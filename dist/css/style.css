@@ -22,8 +22,14 @@ header {
   display: flex;
   align-items: center; }
 
-header img {
+#logoDropDownContainer {
   height: 45%;
+  width: 100%;
+  display: flex;
+  align-items: center; }
+
+#logo {
+  height: 100%;
   padding-left: 2%; }
 
 #dropDownMenu {
@@ -34,7 +40,7 @@ header img {
 
 #dropDownMenu p {
   font-family: 'OpenSans-Light';
-  padding: 15px 0px; }
+  padding-bottom: 15px; }
 
 footer {
   height: 15vh; }
@@ -57,8 +63,13 @@ footer p {
   position: relative;
   overflow: hidden;
   display: flex;
-  align-items: flex-end;
   justify-content: center; }
+
+.article a {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  align-items: flex-end; }
 
 .article h1 {
   position: absolute;
@@ -77,8 +88,10 @@ footer p {
 @media only screen and (max-width: 1240px) {
   header {
     justify-content: center; }
-  header img {
-    height: 45%;
+  #logoDropDownContainer {
+    justify-content: center;
+    transform: translate(-3%, 0); }
+  #logo {
     padding-left: 0%; }
   #dropDownMenu {
     margin-left: 0%;
@@ -93,11 +106,17 @@ footer p {
 
 /*Mobile Media Query*/
 @media only screen and (max-width: 600px) {
-  header {
-    flex-direction: column; }
+  #logoDropDownContainer {
+    flex-direction: column;
+    height: 100%;
+    margin-bottom: 10%;
+    transform: translate(0, 0); }
+  #logo {
+    height: 50%; }
   #dropDownMenu {
     margin-right: 0%;
-    align-items: center; }
+    align-items: center;
+    padding-top: 15px; }
   #articleSection {
     height: 4000px;
     grid-template-columns: 1fr;
