@@ -1,0 +1,180 @@
+//import css reset from external scss file
+@import 'reset';
+
+//import font
+@font-face {
+  font-family: 'OpenSans-Light';
+  src: url('../fonts/OpenSans-Light.ttf');
+}
+
+//scss variables
+$primary-font: 'OpenSans-Light';
+$primary-color: #FFFFFF;
+$footer-color: #c2c2c2;
+
+body {
+  background-color: black;
+}
+  
+//beginning of header
+header {
+  height: 85vh;
+  color: $primary-color;
+  display: flex;
+  align-items: center;
+  transition: all 0.75s ease-in-out;
+}
+
+.logoDropDownContainer{
+  height: 45%;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  transition: all 0.75s ease-in-out;
+}
+ 
+.logo {
+  height: 100%;
+  padding-left: 2%;
+  transition: all 0.75s ease-in-out;
+}
+  
+.dropDownMenu {
+  margin-left: 5%;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+
+  p {
+    font-family: $primary-font;
+    padding-bottom: 15px;
+  }
+}
+
+//loading image GIF
+.loadingImage {
+  height: 20%;
+  width: 20%;
+  margin-left: 40%;
+}
+  
+//beginning of footer
+footer {
+  height: 15vh;
+
+  p {
+    font-family: $primary-font;
+    padding: 30px;
+    color: $footer-color;
+  }
+}
+  
+//begin of article section
+.articleSection {
+  width: 100%;
+  height: 1000px;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr;
+  transition: all 0.75s ease-in-out;
+}
+  
+.article {
+  width: 100%;
+  position: relative;
+  overflow: hidden;
+
+  a {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+  }
+    
+  h1 {
+    font-family: $primary-font;
+    position: absolute;
+    padding: 10px;
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    width: auto;
+    transform: translateY(100%);
+    transition: all 0.75s ease-out;
+  }
+
+  a:hover h1  {
+    transform: translateY(0%);
+  }
+    
+  img {
+    width: auto;
+    height: 100%;
+    position: absolute;
+    z-index: -1;
+  }
+}
+  
+//tablet media query
+@media only screen and (max-width: 1240px) {
+  header {
+    justify-content: center;
+  }
+
+  .logoDropDownContainer {
+    justify-content: center;
+    transform: translate(-3%, 0);
+  }
+
+  .logo {
+    padding-left: 0%;
+  }
+
+  .dropDownMenu {
+    margin-left: 0%;
+    margin-right: 10%;
+  }
+
+  .articleSection {
+    height: 1800px;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr;
+  }
+
+  footer {
+    display: flex;
+    justify-content: center;
+  }
+}
+
+//mobile media query
+@media only screen and (max-width: 600px) {
+  .logoDropDownContainer {
+    flex-direction: column;
+    height: 100%;
+    transform: translate(0, 0);
+  }
+
+  .logo {
+    height: 50%;
+  }
+  
+  .dropDownMenu {
+    margin-right: 0%;
+    align-items: center;
+    padding-top: 15px;
+  }
+
+  .articleSection {
+    height: 4000px;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+  
+    img {
+      width: auto;
+      height: 100%;
+      position: absolute;
+      z-index: -1;
+    }
+  }
+}
