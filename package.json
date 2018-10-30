@@ -17,7 +17,8 @@
   },
   "homepage": "https://github.com/VPaulger/Project-2#readme",
   "dependencies": {
-    "gulp": "^3.9.1"
+    "gulp": "^3.9.1",
+    "gulp-babel-minify": "^0.5.0"
   },
   "devDependencies": {
     "gulp-concat": "^2.6.1",

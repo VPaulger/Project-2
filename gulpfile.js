@@ -1,7 +1,7 @@
-var gulp = require('gulp');
-var imagemin = require('gulp-imagemin');
-var uglify = require('gulp-uglify');
-var sass = require('gulp-sass');
+const gulp = require('gulp');
+const imagemin = require('gulp-imagemin');
+const minify = require("gulp-babel-minify");
+const sass = require('gulp-sass');
 
 //message to check if gulp is functioning
 gulp.task('message', function(){
@@ -21,12 +21,16 @@ gulp.task('imageMin', () =>
   .pipe(gulp.dest('dist/images'))
 );
 
-//uglify files (compress them, minify JS)
-gulp.task('minify', function(){
-  gulp.src('heros/js/*.js')
-  .pipe(uglify())
-  .pipe(gulp.dest('dist/js'))
-}); 
+//minify files for ES6
+gulp.task("minify", () =>
+  gulp.src("heros/js/*.js")
+    .pipe(minify({
+      mangle: {
+        keepClassName: true
+      }
+    }))
+    .pipe(gulp.dest("dist/js"))
+);
 
 //compile sass
 gulp.task('sass', function(){

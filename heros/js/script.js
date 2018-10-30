@@ -13,10 +13,10 @@ $( document ).ready(function() {
     $(".articleSection").empty();
 
     //variable to represent the selected value
-    var selection = $(".selectedValue :selected").val();
+    let selection = $(".selectedValue :selected").val();
 
     //take the selected value and use it in the url to select section/topic
-    var url = ('https://api.nytimes.com/svc/topstories/v2/'+selection+'.json');
+    let url = ('https://api.nytimes.com/svc/topstories/v2/'+selection+'.json');
     url += '?' + $.param({
       'api-key': "6da6e906cd58411a996053a8cf5ab46b"
     });
