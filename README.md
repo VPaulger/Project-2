@@ -18,6 +18,7 @@ Toubleshooting & Difficulties
 - was a very unfamiliar process to make an ajax call using an api key. with the help of tutorials and my peers, began to undestand exactly what was being done and can now succesfully make an ajax call and can disect the desired data.
 - at first did not know what gulp was or how to use it. with the help of a lesson in class and an indepth Youtube tutorial was able to implement gulp. now have a solid undestanding of how to use and read gulp
 - last difficulty was a rather simple problem with no found solution. was unable to ensure that all images pulled from json file were able to fill the available space for each article. most images fill the entire article space while others did not appear correctly if forced to fill the entire space. decided to overlook this last detail as all of the image are high quality and effictively illustrate the article.
+- also tried to style the select button with a up and down arrows on the right side and blue background behind the arrows. tried to implement a css:after property to replace the text, rotate the text 90 degrees and change background color of the button. was not able to accomplish this task. also tried to use jquery methods but did not make a strong attempt.
 
 Conclusion
 - overall project was a success and completed all learning objectives
